@@ -1,0 +1,106 @@
+/* Swiper container (parent) */
+.mySwiper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  transition: transform 0.5s ease; /* Smooth transition for sliding */
+}
+
+/* Individual slide */
+.swiper-slide {
+  background: rgba(255, 255, 255, 0.1); /* Light transparent background for the card */
+  width: 350px; /* Increased width */
+  height: 350px; /* Increased height */
+  border-radius: 15px; /* Rounded corners for the border */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Light border */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease; /* Smooth transition */
+  opacity: 1; /* Initial opacity */
+  transform: rotateY(0deg); /* Initial rotation */
+  box-shadow: none;
+  overflow: hidden;
+}
+
+/* Card styling */
+.card {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Darkened transparent background for better contrast */
+  border-radius: 10px; /* Rounded corners for the inner card content */
+  box-shadow: none; /* Removed shadow on content */
+  transition: all 0.3s ease; /* Smooth transition */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Light border for the card content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Styling for the heading */
+.card-heading {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font for the heading */
+  font-size: 1.6rem; /* Increased font size */
+  font-weight: bold; /* Bold font weight */
+  color: rgb(255, 215, 0); /* Solid Gold color for the heading */
+  margin-bottom: 15px; /* Spacing between the title and description */
+  text-transform: uppercase; /* Uppercase letters for the heading */
+  letter-spacing: 1px; /* Added letter spacing for a modern feel */
+}
+
+/* Styling for the description */
+.card-description {
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font for the description */
+  font-size: 1rem; /* Default font size for description */
+  font-weight: 400; /* Regular font weight */
+  color: rgb(0, 191, 255); /* Deep Sky Blue font color for description */
+  line-height: 1.5; /* Spacing between lines */
+  text-align: center;
+  max-width: 280px; /* Limit the width of the text */
+  margin: 0; /* Remove margin from description */
+}
+
+/* Smooth hover effect on the card */
+.swiper-slide:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4); /* Subtle shadow on hover */
+  border: 2px solid rgb(255, 165, 0); /* Dynamic border on hover */
+}
+
+/* RGB Border Styling */
+@keyframes dynamicBorder {
+  0% {
+    border-color: rgb(255, 0, 0); /* Red */
+  }
+  25% {
+    border-color: rgb(255, 165, 0); /* Orange */
+  }
+  50% {
+    border-color: rgb(0, 255, 0); /* Green */
+  }
+  75% {
+    border-color: rgb(0, 0, 255); /* Blue */
+  }
+  100% {
+    border-color: rgb(255, 0, 255); /* Magenta */
+  }
+}
+
+/* Apply dynamic border on hover */
+.swiper-slide:hover {
+  animation: dynamicBorder 2s infinite; /* Dynamic border animation with infinite loop */
+  box-shadow: none; /* Removed shadow on hover */
+}
+/* Styling for the heading */
+.card-heading {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font for the heading */
+  font-size: 1.6rem; /* Increased font size */
+  font-weight: bold; /* Bold font weight */
+  color: rgb(255, 215, 0); /* Solid Gold color for the heading */
+  margin-bottom: 15px; /* Spacing between the title and description */
+  text-transform: uppercase; /* Uppercase letters for the heading */
+  letter-spacing: 1px; /* Added letter spacing for a modern feel */
+}
