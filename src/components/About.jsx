@@ -35,6 +35,7 @@ const ServiceCard = ({ index, title, icon, setHidePointer }) => (
   </Tilt>
 );
 
+
 const About = () => {
   const [pointerTrail, setPointerTrail] = useState([]);
   const [hidePointer, setHidePointer] = useState(false);

@@ -3,6 +3,7 @@ import {
   About,
   Contact,
   Experience,
+  
   Feedbacks,
   Hero,
   Navbar,
@@ -10,12 +11,13 @@ import {
   Works,
   StarsCanvas,
 } from "./components";
+import Dock from "./dock";
 
 const App = () => {
   return (
     <BrowserRouter>
       {/* Main Container */}
-      <div className="relative z-0 bg-primary">
+      <div className="relative z-0 bg-primary" >
         {/* Background Stars */}
         {/* <StarsCanvas /> */}
 
@@ -27,6 +29,7 @@ const App = () => {
         <About />
         <Experience />
         <Tech />
+        <Dock />
         <Works />
         <Feedbacks />
         <div className="relative z-10">
