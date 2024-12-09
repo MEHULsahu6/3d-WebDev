@@ -47,17 +47,17 @@ const Works = () => {
     {
       winnerName: "Player1",
       rank: "1st",
-      winnerImage: "https://example.com/player1-image.jpg",
+      winnerImage: "./user.png",
     },
     {
       winnerName: "Player2",
       rank: "2nd",
-      winnerImage: "https://example.com/player2-image.jpg",
+      winnerImage: "./user.png",
     },
     {
       winnerName: "Player3",
       rank: "3rd",
-      winnerImage: "https://example.com/player3-image.jpg",
+      winnerImage: "./user.png",
     },
     // Add more winners as needed
   ];

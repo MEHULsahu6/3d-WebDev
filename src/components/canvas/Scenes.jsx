@@ -12,7 +12,7 @@ const Scene3d = () => {
           display: "flex", // Enables flexbox layout
           justifyContent: "center", // Centers horizontally
           alignItems: "center", // Centers vertically
-          marginLeft: "-6vw",
+          marginLeft: "-15vw",
           background:"transparent" // Removes any default margins
       }}
   >
