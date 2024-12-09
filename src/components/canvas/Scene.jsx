@@ -24,10 +24,10 @@ const Scene = () => {
                 decay={2} 
                 color="#FF6347" 
             />
-            <group position={[0, 0, 0]} rotation={[0, 1, 0.5]}>
+            <group position={[1, 0, 0]} rotation={[0, 1.5, 0.3]}>
                 <mesh ref={scene}>
                     {/* Adjust the dimensions here: args = [topRadius, bottomRadius, height, radialSegments, heightSegments] */}
-                    <cylinderGeometry args={[3, 2.8, 3.2, 60, 60, true]} />
+                    <cylinderGeometry args={[4.8, 5, 3.2, 90, 90, true]} />
                     <meshStandardMaterial
                         map={tex}
                         transparent

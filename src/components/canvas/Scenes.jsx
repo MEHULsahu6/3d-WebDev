@@ -7,8 +7,8 @@ const Scene3d = () => {
     return (
       <div
       style={{
-          height: "80vh", // 50% of the viewport height
-          width: "80vw", // Full viewport width
+          height: "85vh", // 50% of the viewport height
+          width: "75vw", // Full viewport width
           display: "flex", // Enables flexbox layout
           justifyContent: "center", // Centers horizontally
           alignItems: "center", // Centers vertically
@@ -19,7 +19,7 @@ const Scene3d = () => {
       <Canvas
           flat
           camera={{
-              fov: 50,
+              fov: 55,
               position: [0, 0, 10], // Camera distance from the scene
           }}
       >
