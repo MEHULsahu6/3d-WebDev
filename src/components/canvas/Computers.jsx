@@ -8,11 +8,11 @@ const Computers = ({ isMobile }) => {
   const groupRef = useRef();
 
   // Rotate the model infinitely
-  useFrame(() => {
-    if (groupRef.current) {
-      groupRef.current.rotation.y += 0.01; // Change rotation speed here
-    }
-  });
+  // useFrame(() => {
+  //   if (groupRef.current) {
+  //     groupRef.current.rotation.y += 0.01; // Change rotation speed here
+  //   }
+  // });
 
   return (
     <mesh ref={groupRef}>
