@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com"; // Import EmailJS
 import axios from "axios";
 
 import { styles } from "../styles";
@@ -13,7 +14,6 @@ const TournamentRegistration = () => {
     name: "",
     email: "",
     teamName: "",
-
     players: "",
   });
 
@@ -21,7 +21,6 @@ const TournamentRegistration = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setForm({
       ...form,
       [name]: value,
@@ -33,13 +32,27 @@ const TournamentRegistration = () => {
     setLoading(true);
 
     try {
+      // Send data to your backend
       await axios.post("http://localhost:5000/api/register", form);
-      alert("Registration successful!");
+
+      // Send email using EmailJS
+      await emailjs.send(
+        "service_ws0dmic", // Replace with your EmailJS service ID
+        "template_47esl1f", // Replace with your EmailJS template ID
+        {
+          name: form.name,
+          email: form.email,
+          teamName: form.teamName,
+          players: form.players,
+        },
+        "mDjQqZNGiHk3SekcJ" // Replace with your EmailJS user ID
+      );
+
+      alert("Registration successful! Confirmation email sent.");
       setForm({
         name: "",
         email: "",
         teamName: "",
-        
         players: "",
       });
     } catch (error) {
@@ -99,7 +112,6 @@ const TournamentRegistration = () => {
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
-         
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Number of Players</span>
             <input
